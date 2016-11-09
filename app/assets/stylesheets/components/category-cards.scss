@@ -1,0 +1,29 @@
+.category-cards {
+  .category-card {
+    display: inline-block;
+    width: 33%;
+    padding: 0 20px;
+    .category-card-inner {
+      @extend .text-center;
+      @extend .text-white;
+      display: block;
+      background-color: $blue;
+      padding: 20px;
+      border-bottom: 5px solid white;
+      transition: all 1s;
+      &:hover {
+        background-color: darken($blue, 10%);
+        text-decoration: none;
+      }
+      .category-card-title {
+        @extend .text-h3;
+      }
+      .category-image {
+        @extend .mb-2;
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

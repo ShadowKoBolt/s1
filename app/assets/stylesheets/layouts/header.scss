@@ -1,0 +1,43 @@
+$nav-height: 74px;
+
+.navbar-brand {
+  height: 145px;
+}
+
+.navbar-nav > li > a {
+  font-family: "Ruboto", sans-serif;
+  text-transform: uppercase;
+  color: $grey;
+  font-size: 16px;
+  font-weight: 300;
+  transition: all 1s;
+  &:hover {
+    background: none;
+    color: $blue;
+  }
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: $nav-height;
+    padding-bottom: $nav-height;
+    text-align: inherit;
+  }
+}
+
+.navbar-toggle {
+  border: 2px solid $blue;
+  margin-top: $nav-height;
+  margin-bottom: $nav-height;
+  transition: all 1s;
+  &:hover {
+    border: 2px solid lighten($blue, 20%);
+    .icon-bar {
+      background-color: lighten($blue, 20%);
+    }
+  }
+  .icon-bar {
+    background-color: $blue;
+    transition: all 1s;
+  }
+}

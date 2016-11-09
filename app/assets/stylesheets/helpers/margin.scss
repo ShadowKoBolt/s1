@@ -1,0 +1,4 @@
+@for $i from 1 through 50 {
+  .mb-#{$i} { margin-bottom: ($i * 10px); }
+  .mt-#{$i} { margin-top: ($i * 10px); }
+}
