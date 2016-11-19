@@ -1,31 +1,35 @@
 .container
-  h3 Category cards
-  pre.mb-2
-    |
-      .category-cards
-        .category-card
-          a.category-card-inner href="#"
-            .category-image = image_tag "spine.png"
-            .category-card-title Hello World
-        .category-card
-          a.category-card-inner href="#"
-            .category-image = image_tag "pregnancy.png"
-            .category-card-title Hello World
-        .category-card
-          a.category-card-inner href="#"
-            .category-image = image_tag "book.png"
-            .category-card-title Hello World
+  .mv6
+    h3 Category cards
+    pre.mb-2
+      | = render "components/category_cards"
+    = render "components/category_cards"
 
-  .category-cards
-    .category-card
-      a.category-card-inner href="#"
-        .category-image = image_tag "spine.png"
-        .category-card-title Hello World
-    .category-card
-      a.category-card-inner href="#"
-        .category-image = image_tag "pregnancy.png"
-        .category-card-title Hello World
-    .category-card
-      a.category-card-inner href="#"
-        .category-image = image_tag "book.png"
-        .category-card-title Hello World
+  .mv6
+    h3 Blog preview
+    pre.mb-2
+      |
+        .row
+          .col-sm-6
+            = render "components/blog_preview"
+    .row
+      .col-sm-6
+        = render "components/blog_preview"
+
+  .mv6
+    h3 Social
+    pre.mb-2
+      |
+        .row
+          .col-sm-6
+            = render "components/social", social: @social
+    .row
+      .col-sm-6
+        = render "components/social", social: @social
+
+  .mv6
+    h3 Testimonials
+    pre.mb-2
+      |
+        = render "components/testimonials", testimonials: @testimonials
+    = render "components/testimonials", testimonials: @testimonials

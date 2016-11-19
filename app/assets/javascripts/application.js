@@ -14,4 +14,16 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
+//= require thirdparty/slick.min
+//= require_self
+
+document.addEventListener("turbolinks:load", function() {
+  $("[js-testimonial-list]").slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 4000
+  });
+})

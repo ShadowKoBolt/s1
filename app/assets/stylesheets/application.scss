@@ -1,9 +1,13 @@
+@import "colors";
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "thirdparty/tachyons.min";
+@import "thirdparty/slick";
+@import "thirdparty/slick-theme";
 
 @import "reset";
 @import "fonts";
-@import "colors";
 @import "hr";
 
 @import "helpers/*";

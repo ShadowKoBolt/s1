@@ -1,0 +1,16 @@
+.pa4.tc
+  .text-grey.underline-blue.mb-3.text-h3 = social.fields[:title]
+  .mb-1
+    = render "mailchimp"
+  p.mb-2
+    small = social.fields[:newsletterSignupDetails]
+  .row
+    .col-xs-4.text-center
+      = link_to social.fields[:facebookUrl] do
+        = image_tag "facebook.png"
+    .col-xs-4.text-center
+      = link_to social.fields[:twitterUrl] do
+        = image_tag "twitter.png"
+    .col-xs-4.text-center
+      = link_to social.fields[:linkedInUrl] do
+        = image_tag "linkedin.png"

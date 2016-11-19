@@ -1,0 +1,21 @@
+.blog-preview {
+  @extend .text-center;
+  @extend .p-2;
+  .blog-preview-img img {
+    @extend .img-circle;
+    max-width: 20%;
+  }
+  .blog-preview-title {
+    @extend .text-grey;
+    @extend .underline-blue;
+    @extend .text-h3;
+    @extend .mb-2;
+  }
+  .blog-preview-summary {
+    @extend .text-grey;
+    @extend .mb-2;
+  }
+  .blog-preview-read-more {
+    @extend .text-uppercase;
+  }
+}
