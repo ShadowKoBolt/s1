@@ -21,3 +21,10 @@
 
 en:
   site_name: "S1 Chiropractic"
+  testimonials:
+    index:
+      title: "Testimonials"
+  layout:
+    header:
+      home: "Home"
+      testimonials: "Testimonials"

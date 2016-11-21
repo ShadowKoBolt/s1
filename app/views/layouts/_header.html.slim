@@ -10,5 +10,7 @@ nav.navbar.navbar-static-top
         = image_tag "logo.png", alt: t("site_name")
     #navbar3.navbar-collapse.collapse
       ul.nav.navbar-nav.navbar-right
-        li.active
-          a href=root_path  Home
+        li
+          a href=root_path = t ".home"
+        li
+          a href=testimonials_path = t ".testimonials"
