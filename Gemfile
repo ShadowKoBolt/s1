@@ -50,6 +50,7 @@ gem "bootstrap-sass"
 gem "i18n-debug"
 gem "figaro"
 gem "faker"
+gem "redcarpet"
 
 group :development do
   gem "rubocop"

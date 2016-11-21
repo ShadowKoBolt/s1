@@ -1,9 +1,11 @@
 footer.pv4.ph3.ph5-m.ph6-l.mid-gray.bg-white
-  small.f6.db.tc
-    | © 2016
-    b.ttu<> SOME COMPANY Inc
-    | All Rights Reserved
-  .tc.mt3
-    a.f6.dib.ph2.link.mid-gray.dim href="/language/" title="Language"  Language
-    a.f6.dib.ph2.link.mid-gray.dim href="/terms/" title="Terms"  Terms of Use
-    a.f6.dib.ph2.link.mid-gray.dim href="/privacy/" title="Privacy"  Privacy
+  .row
+    .col-sm-4.tc.mb4
+      h4.dib.bb.b--blue.pb3 = @footer.fields[:column1Title]
+      == simple_format(@renderer.render(@footer.fields[:column1]))
+    .col-sm-4.tc.mb4
+      h4.dib.bb.b--blue.pb3 = @footer.fields[:column2Title]
+      == simple_format(@renderer.render(@footer.fields[:column2]))
+    .col-sm-4.tc.mb4
+      h4.dib.bb.b--blue.pb3 = @footer.fields[:column3Title]
+      == simple_format(@renderer.render(@footer.fields[:column3]))
