@@ -51,9 +51,12 @@ gem "i18n-debug"
 gem "figaro"
 gem "faker"
 gem "redcarpet"
+gem "simple_form"
+
 
 group :development do
   gem "rubocop"
   gem "brakeman"
   gem "bundler-audit"
+  gem "letter_opener"
 end

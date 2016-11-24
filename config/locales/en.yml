@@ -24,7 +24,18 @@ en:
   testimonials:
     index:
       title: "Testimonials"
-  layout:
+  layouts:
     header:
       home: "Home"
       testimonials: "Testimonials"
+      contact: "Contact"
+  helpers:
+    submit:
+      contact:
+        create: "Send"
+  contact:
+    create:
+      success: "Your message has been sent, we will get back to you as soon as possible"
+  contact_mailer:
+    new_contact:
+      subject: "A new message has been received"

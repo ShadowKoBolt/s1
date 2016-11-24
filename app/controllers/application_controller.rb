@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :load_footer
 
   def root
+    @footer_bg = "bg-white"
     @homepage = Client.entries(content_type: "homepage").first
     @banner_image = @homepage.banner_images.sample
     @social = Client.entries(content_type: "componentSocial").first

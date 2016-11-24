@@ -1,0 +1,8 @@
+= simple_form_for(@contact, url: contact_path) do |f|
+  = f.input :name, input_html: { required: true }
+  = f.input :email, as: :email
+  .row
+    .col-sm-6
+      = f.input :telephone, as: :tel
+  = f.input :message, as: :text, input_html: { rows: 10 }
+  = f.button :submit, class: "btn btn-primary"

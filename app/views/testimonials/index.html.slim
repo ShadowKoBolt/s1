@@ -1,12 +1,12 @@
 .bg-white.main
   .container
-    h1.tc = t ".title"
+    h1 = t ".title"
 
 - @testimonials.each do |testimonial|
   div class=cycle("bg-white", "")
     .container
       .pv4
         blockquote.ml0.mt0.pl4.black-90.bl.bw2.b--blue
-          p.f3.i
+          p.f2.i
             = testimonial.fields[:body]
           cite.f4.ttu.fs-normal ― #{testimonial.fields[:author]}
