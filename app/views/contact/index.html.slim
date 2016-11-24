@@ -2,7 +2,7 @@
   .container
     h1 = @page.fields[:title]
     .row
-      .col-sm-6
+      .col-sm-6.mb4
         == simple_format(@renderer.render(@page.fields[:body]))
       .col-sm-6
         = render "form", contact: @contact

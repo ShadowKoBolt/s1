@@ -1,0 +1,10 @@
+header.sans-serif
+  .cover.bg-left.bg-center-l style=("background-image: url(#{@blog_post.fields[:bannerImage].image_url})")
+    .bg-black-70.pb5.pb6-m.pb7-l
+      .tc.mt4.mt5-m.mt7-l.ph3
+        h1.f1.fw2.white-90.mb4.lh-title = @blog_post.fields[:title]
+        h2.fw1.f2.white-80.mb4 = @blog_post.fields[:summary]
+        .fw1.f4.white-80.mb4 = t(".publishing_info", author: @blog_post.fields[:author], date: l(Date.parse(@blog_post.fields[:publicationDate])))
+.bg-white
+  .container.main.main-body
+    == @renderer.render(@blog_post.fields[:body])

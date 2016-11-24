@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     @banner_image = @homepage.banner_images.sample
     @social = Client.entries(content_type: "componentSocial").first
     @testimonials = Client.entries(content_type: "testimonial")
+    @blog_post = Client.entries(content_type: "blogPost").first
   end
 
   def styleguide

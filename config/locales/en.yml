@@ -39,3 +39,15 @@ en:
   contact_mailer:
     new_contact:
       subject: "A new message has been received"
+  application:
+    root:
+      book_now: "Book now"
+  components:
+    blog_preview:
+      read_more: "Read more"
+  blog:
+    show:
+      publishing_info: "Written by %{author} on %{date}"
+  date:
+    formats:
+      default: "%A %-d %B %Y"

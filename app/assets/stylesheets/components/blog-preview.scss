@@ -1,9 +1,11 @@
 .blog-preview {
   @extend .text-center;
   @extend .p-2;
-  .blog-preview-img img {
-    @extend .img-circle;
-    max-width: 20%;
+  .blog-preview-img {
+    @extend .cover, .br-100, .center, .mb3;
+    width: 100px;
+    height: 100px;
+
   }
   .blog-preview-title {
     @extend .text-grey;

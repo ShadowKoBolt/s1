@@ -18,9 +18,8 @@
     .row
       .col-sm-6
         = render "components/social", social: @social
-
       .col-sm-6
-        = render "components/blog_preview"
+        = render "components/blog_preview", blog_post: @blog_post
 
 .container
   = render "components/testimonials", testimonials: @testimonials

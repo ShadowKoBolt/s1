@@ -1,6 +1,6 @@
 .blog-preview
-  .blog-preview-img = image_tag "blog.png"
-  .blog-preview-title Example blog post title
-  .blog-preview-summary = truncate(Faker::Lorem.paragraph, length: 140, separator: " ")
-  .blog-preview-read-more = link_to t(".read_more"), "#"
+  .blog-preview-img style="background-image: url(#{blog_post.fields[:bannerImage].image_url(height: 200)});"
+  .blog-preview-title = blog_post.fields[:title]
+  .blog-preview-summary = blog_post.fields[:summary]
+  .blog-preview-read-more = link_to t(".read_more"), blog_post_path(id: blog_post.fields[:slug])
 

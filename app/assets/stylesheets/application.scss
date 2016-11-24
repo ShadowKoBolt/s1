@@ -34,3 +34,13 @@
     font-size: 2em;
   }
 }
+
+.main-body {
+  @extend .pv5;
+  img {
+    @extend .w-100, .mv4;
+  }
+  blockquote {
+    @extend .mv5, .b--blue, .i;
+  }
+}

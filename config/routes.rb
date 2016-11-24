@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "testimonials" => "testimonials#index"
   get "contact" => "contact#index"
   post "contact" => "contact#create"
+  get "blog/:id" => "blog#show", as: "blog_post"
 end
