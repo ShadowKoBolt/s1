@@ -1,0 +1,6 @@
+.testimonial {
+  .testimonial-body {
+    @extend .avenir, .i;
+    font-size: 1.7rem;
+  }
+}

@@ -1,21 +1,29 @@
-@import "colors";
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
 @import "thirdparty/tachyons.min";
 @import "thirdparty/slick";
 @import "thirdparty/slick-theme";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+@import "colors";
 @import "reset";
 @import "fonts";
 @import "hr";
-
 @import "helpers/*";
 @import "layouts/*";
 @import "components/*";
+@import "testimonials";
+
 
 .b--blue {
   border-color: $brand-primary;
+}
+
+.bg-blue {
+  background-color: $brand-primary;
+}
+
+body.body {
+  @extend .avenir;
 }
 
 .main {
@@ -32,6 +40,12 @@
     font-weight: 200;
     text-transform: uppercase;
     font-size: 2em;
+  }
+  h3 {
+    @extend .pt3;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1.3em;
   }
 }
 

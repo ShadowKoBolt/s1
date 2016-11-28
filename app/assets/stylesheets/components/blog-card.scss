@@ -1,0 +1,28 @@
+a.blog-card {
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    background: darken(white, 3%);
+  }
+  @extend .text-center;
+  @extend .p-2;
+  .blog-card-img {
+    @extend .cover, .br-100, .center, .mb3;
+    width: 100px;
+    height: 100px;
+
+  }
+  .blog-card-title {
+    @extend .text-grey;
+    @extend .underline-blue;
+    @extend .text-h3;
+    @extend .mb-2;
+  }
+  .blog-card-summary {
+    @extend .text-grey;
+    @extend .mb-2;
+  }
+  .blog-card-read-more {
+    @extend .text-uppercase;
+  }
+}

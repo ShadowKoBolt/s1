@@ -1,0 +1,9 @@
+.bg-white.main
+  .container
+    h1.mb5 = t ".title"
+
+    - @blog_posts.to_a.in_groups_of(3, false) do |group|
+      .row
+        - group.each do |blog_post|
+            .col-sm-4
+              = render "components/blog_card", blog_post: blog_post

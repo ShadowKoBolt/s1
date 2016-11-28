@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   def root
     @footer_bg = "bg-white"
     @homepage = Client.entries(content_type: "homepage").first
-    @banner_image = @homepage.banner_images.sample
+    @banner_image = @homepage.fields[:bannerImages].sample
     @social = Client.entries(content_type: "componentSocial").first
     @testimonials = Client.entries(content_type: "testimonial")
     @blog_post = Client.entries(content_type: "blogPost").first

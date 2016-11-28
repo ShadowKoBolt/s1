@@ -29,6 +29,7 @@ en:
       home: "Home"
       testimonials: "Testimonials"
       contact: "Contact"
+      blog: "Blog"
   helpers:
     submit:
       contact:
@@ -45,9 +46,13 @@ en:
   components:
     blog_preview:
       read_more: "Read more"
+    blog_card:
+      read_more: "Read more"
   blog:
     show:
       publishing_info: "Written by %{author} on %{date}"
+    index:
+      title: "Blog"
   date:
     formats:
       default: "%A %-d %B %Y"

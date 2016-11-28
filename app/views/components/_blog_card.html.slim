@@ -1,0 +1,5 @@
+a.blog-card.ba.br3.db href=blog_post_path(id: blog_post.fields[:slug])
+  .blog-card-img style="background-image: url(#{blog_post.fields[:bannerImage].image_url(height: 200)});"
+  .blog-card-title = blog_post.fields[:title]
+  .blog-card-summary = blog_post.fields[:summary]
+

@@ -1,8 +1,8 @@
-.cover style="background-image: url('#{@banner_image.file.url}');"
+.cover.bg-blue style="background-image: url('#{@banner_image.file.url}');"
   .background-opacity.mt-40
     .container.text-white.text-center.mb-1
-      h1.f-headline = @homepage.title
-      h2.f1 = @homepage.subtitle
+      h1.f-headline = @homepage.fields[:title]
+      h2.f1 = @homepage.fields[:subtitle]
 
 .bg-white.text-center.text-grey.mb-4
   .container

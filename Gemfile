@@ -59,4 +59,6 @@ group :development do
   gem "brakeman"
   gem "bundler-audit"
   gem "letter_opener"
+  gem "pry-rails"
+  gem "pry-nav"
 end
