@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :load_renderer
-  before_action :load_footer
 
   def root
     @footer_bg = "bg-white"
@@ -18,11 +17,12 @@ class ApplicationController < ActionController::Base
     @testimonials = Client.entries(content_type: "testimonial")
   end
 
-  private
-
-  def load_footer
-    @footer = Client.entries(content_type: "componentFooter").first
+  def clear_cache
+    Rails.cache.clear
+    render nothing: true, status: :ok
   end
+
+  private
 
   def load_renderer
     @renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML)

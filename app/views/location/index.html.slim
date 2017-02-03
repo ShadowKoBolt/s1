@@ -1,8 +1,10 @@
-.bg-white.main
-  .container
-    h1 = @page.fields[:title]
-    .row
-      .col-sm-6.mb4
-        == simple_format(@renderer.render(@page.fields[:body]))
-      .col-sm-5.col-sm-offset-1
-        == @page.fields[:location]
+- cache "location-page" do
+  - page = load_location_page
+  .bg-white.main
+    .container
+      h1 = page.fields[:title]
+      .row
+        .col-sm-6.mb4
+          == simple_format(@renderer.render(page.fields[:body]))
+        .col-sm-5.col-sm-offset-1
+          == page.fields[:location]

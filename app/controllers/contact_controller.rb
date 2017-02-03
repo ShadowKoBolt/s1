@@ -1,11 +1,9 @@
 class ContactController < ApplicationController
   def index
-    @page = Client.entries(content_type: "contactPage").first
     @contact = Contact.new
   end
 
   def create
-    @page = Client.entries(content_type: "contactPage").first
     @contact = Contact.new(contact_params)
     if @contact.valid?
       ContactMailer.new_contact(@contact).deliver_now

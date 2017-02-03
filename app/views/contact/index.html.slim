@@ -1,8 +1,12 @@
 .bg-white.main
   .container
-    h1 = @page.fields[:title]
+    - cache ["contact", "title"] do
+      - page = load_contact_page
+      h1 = page.fields[:title]
     .row
       .col-sm-6.mb4
-        == simple_format(@renderer.render(@page.fields[:body]))
+        - cache ["contact", "body"] do
+          - page = load_contact_page
+          == simple_format(@renderer.render(page.fields[:body]))
       .col-sm-6
         = render "form", contact: @contact

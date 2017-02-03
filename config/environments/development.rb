@@ -14,9 +14,16 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # if Rails.root.join("tmp/caching-dev.txt").exist?
-  config.action_controller.perform_caching = true
+  if Rails.root.join("tmp/caching-dev.txt").exist?
+    config.action_controller.perform_caching = true
+    config.cache_store = ActiveSupport::Cache::MemoryStore.new(expires_in: 1.hour)
+    config.cache_store.logger = Logger.new("#{Rails.root}/log/#{Rails.env}_cache.log")
+    config.cache_store.logger.level = Logger::DEBUG
+  else
+    config.action_controller.perform_caching = false
+    config.cache_store = :null_store
+  end
 
-  config.cache_store = :memory_store
   config.public_file_server.headers = {
     "Cache-Control" => "public, max-age=172800"
   }

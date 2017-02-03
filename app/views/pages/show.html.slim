@@ -1,0 +1,6 @@
+- cache ["basic_page", params[:id]] do
+  - basic_page = load_basic_page(params[:id])
+  .bg-white
+    .container.main.main-body
+      h1.mb5 = basic_page.fields[:title]
+      == @renderer.render(basic_page.fields[:body])
